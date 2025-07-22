@@ -14,6 +14,7 @@ function startGame(){
 }
 
 function renderGame(){
+  
     cardsEl.textContent = "Cards: ";
     for (let i = 0; i < cards.length; i++){
       cardsEl.textContent += cards[i] + " ";
@@ -33,8 +34,15 @@ messageEl.textContent = message;
 }
 
 function getRandomCard(){
-  let randomCard = Math.floor(Math.random() * 10) + 2;
-  return randomCard;
+  let randomCard = Math.floor(Math.random() * 13) + 1;
+  if (randomCard === 1){
+    return 11;
+  } else if (randomCard > 10){
+    return 10;
+  } else{
+    return randomCard;
+  }
+  
 }
 
 function newCard(){

@@ -7,6 +7,16 @@ let messageEl = document.getElementById("message-el");
 let sumEl = document.querySelector("#sum-el");
 let cardsEl = document.querySelector("#cards-el");
 
+let player = {
+  name: "Hubert",
+  chips: 145
+}
+
+
+
+let playerEl = document.getElementById("player-el");
+playerEl.textContent = player.name + ": $" + player.chips;
+
 function startGame(){
   isAlive = true;
   let firstCard = getRandomCard();
